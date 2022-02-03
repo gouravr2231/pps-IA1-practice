@@ -22,7 +22,7 @@ int cmp(int a,int b,int c)
 
 void output(int a,int b,int c,int max)
 {
-  printf("Largesr of three number is %d\n",max);
+  printf("Largest of three number is %d\n",max);
 }
 
 int main()

@@ -6,7 +6,7 @@ Enter a number
 2
 Enter a number
 3
-Largesr of three number is 3
+Largest of three number is 3
  gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
 Copyright (C) 2018 Free Software Foundation, Inc.
@@ -97,7 +97,7 @@ main () at p2original.c:35
 output (a=1, b=2, c=3, max=3) at p2original.c:25
 25    printf("Largesr of three number is %d\n",max);
 (gdb) n
-Largesr of three number is 3
+Largest of three number is 3
 26  }
 (gdb) n
 main () at p2original.c:36
