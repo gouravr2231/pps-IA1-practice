@@ -1,0 +1,113 @@
+gcc -g p3original.c
+ ./a.out
+Enter number of values to add:
+5
+1+2+3+4+5 = 15
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x849: file p3original.c, line 33.
+(gdb) r
+Starting program: /home/runner/pps-IA1-practice-2/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p3original.c:33
+33    n = input_n();
+(gdb) s
+input_n () at p3original.c:4
+4   {
+(gdb) n
+6     printf("Enter number of values to add:\n");
+(gdb) n
+Enter number of values to add:
+7     scanf("%d",&n);
+(gdb) n
+5
+8     return n;
+(gdb) n
+9   }
+(gdb) n
+main () at p3original.c:34
+34    sum = sum_n(n);
+(gdb) s
+sum_n (n=5) at p3original.c:13
+13    int sum=0;
+(gdb) n
+14    for (int i=1; i<=n; i++)
+(gdb) n
+16      sum = sum + i;
+(gdb) n
+14    for (int i=1; i<=n; i++)
+(gdb) n
+16      sum = sum + i;
+(gdb) n
+14    for (int i=1; i<=n; i++)
+(gdb) n
+16      sum = sum + i;
+(gdb) n
+14    for (int i=1; i<=n; i++)
+(gdb) n
+16      sum = sum + i;
+(gdb) n
+14    for (int i=1; i<=n; i++)
+(gdb) n
+16      sum = sum + i;
+(gdb) n
+14    for (int i=1; i<=n; i++)
+(gdb) n
+18    return sum;
+(gdb) n
+19  }
+(gdb) n
+main () at p3original.c:35
+35    output(n,sum);
+(gdb) s
+output (n=5, sum=15) at p3original.c:23
+23    for(int i=1; i<n; i++)
+(gdb) n
+25      printf("%d+",i);
+(gdb) n
+23    for(int i=1; i<n; i++)
+(gdb) n
+25      printf("%d+",i);
+(gdb) n
+23    for(int i=1; i<n; i++)
+(gdb) n
+25      printf("%d+",i);
+(gdb) n
+23    for(int i=1; i<n; i++)
+(gdb) n
+25      printf("%d+",i);
+(gdb) n
+23    for(int i=1; i<n; i++)
+(gdb) n
+27    printf("%d = %d\n",n,sum);
+(gdb) n
+1+2+3+4+5 = 15
+28  }
+(gdb) n
+main () at p3original.c:36
+36    return 0;
+(gdb) n
+37  }(gdb) p n
+$1 = 5
+(gdb) q
+A debugging session is active.
+
+    Inferior 1 [process 165] will be killed.
+
+Quit anyway? (y or n) y
